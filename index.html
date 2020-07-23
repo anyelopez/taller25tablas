@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Taller25 - Anyela López</title>
+</head>
+ <body>
+        <h1>Tablas de Multiplicar</h1>  
+        <p>Por favor, introduce un número entre 2 y 10:</p>  
+        <input id="num1"><br>  
+        <button type="button" onclick="myFunction()">ver la tabla de multiplicar</button>  
+        <p id="numero">la tabla es:</p>  
+
+
+ <script>  
+  function myFunction() 
+{  
+    var x,producto;
+    x = document.getElementById("num1").value;  
+    console.log ('tabla de multiplicar del',x)
+
+    if (parseFloat(x)>=2 && parseFloat(x)<=10)
+   {  
+      for (cont=0 ; cont <= 10; cont++) 
+      {
+        producto=parseFloat(x)*parseFloat(cont); 
+        console.log (x,"*",cont,"=",producto)
+        text= producto; 
+        document.getElementById("numero").innerHTML = text;  
+        
+      }
+    }
+    else
+     {  
+      text = "Es necesarios introducir numero entre 2 y 10";  
+      document.getElementById("numero").innerHTML = text; 
+      } 
+ } 
+      
+  </script> 
+</body>
+</html> 
+
+
